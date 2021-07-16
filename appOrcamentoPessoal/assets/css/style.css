@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #017BFF;
+  padding: 10px 20px;
+}
+
+#header {
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.menu-openner {
+  height: 20px;
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+
+}
+
+.bar {
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #fff;
+}
+
+.menu a, li{
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 5px 8px;
+}
+
+.menu a:hover {
+  background-color: #014ea0;
+  border-radius: 4px;
+  transition: 300ms;
+}
+
+
+@keyframes openMenu {
+  0% {
+    padding: 0;
+  }
+  100% {
+    padding: 10px 0;
+  }
+}
+
+.closed {
+  display: none;
+}
+
+.openned {
+  animation: openMenu 0.3s;
+  display: block;
+  padding: 10px 0;
+}
+
+main {
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+main .container {
+  
+  padding: 0px 20px;
+}
+
+
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+#form {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 30px; 
+  grid-row-gap: 10px;
+}
+
+select, input {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  padding: 8px 5px;
+  outline: none;
+}
+select:hover, input:hover,
+select:focus-within, input:focus-within {
+  box-shadow: 0px 0px 3px #017BFFa1;
+}
+
+#tipo {
+  grid-column: 4 / 7;
+}
+
+#desc {
+  grid-column: 1 / 5;
+}
+
+#valor {
+  max-width: 146px;
+}
+button {
+  height: 33px;
+  width: 33px;
+  border-radius: 5px;
+  background-color: #017BFF;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  justify-self: right;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #025cbd;
+  transition: 400ms;
+}
+
+button span {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  background-image: url(../images/lupa.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#tabela {
+  display: grid;
+}
+
+thead {
+  margin-top: 40px;
+  border-bottom: 1px solid #ccc;
+}
+
+th, td {
+  justify-self: flex-start;
+  padding: 10px 0px;
+}
+tr {
+  display: grid;
+  padding: 0px 8px;
+  border-top: 1px solid #ccc;
+  grid-template-columns: repeat(4, 1fr );
+}
+
+tbody tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(2, 0.5fr);
+
+}
+
+td {
+  display: flex;
+  align-items: center;
+}
+
+td button {
+  background-color: #ff2f2f;
+  font-size: 18px;
+  height: 28px;
+  width: 34px;
+}
+
+td button:hover {
+  background-color: #cf2626;
+
+}
+
+/* MODAL */
+#modal{
+  background-color: #0000002d;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  transition: 400ms;
+}
+#modal.hide {
+  display: none;
+}
+
+#modal.show {
+  display: flex;
+}
+
+#modal .content{
+  background-color: #fff;
+  max-width: 460px;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 30px;
+
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #0000001a;
+
+  margin-top: 30px;
+
+}
+
+#modal.error h1 {
+  color: #ff2f2f;
+  font-size: 24px;
+}
+
+#modal.sucess h1 {
+  color: #57A846;
+  font-size: 24px;
+}
+
+#modal button {
+  width: auto;
+  align-self: flex-end;
+  font-size: 16px;
+  font-weight: normal;
+  padding: 5px 8px;
+  
+  margin-top: 30px;
+}
+
+#modal.error button {
+  background-color: #ff2f2f;
+}
+
+#modal.sucess button {
+  background-color: #57A846;
+}
+
+#modal.error button:hover {
+  background-color: #cf2626;
+  transition: 300ms;
+}
+
+#modal.sucess button:hover {
+  background-color: #396e2f;
+  transition: 300ms;
+}
+
+tr td:last-child {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+@media (max-width: 620px) {
+  #form {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  select, input, #tipo, #valor, #desc {
+    grid-column: auto;
+  }
+  #valor {
+    max-width: none;
+  }
+}

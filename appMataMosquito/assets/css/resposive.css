@@ -1,0 +1,16 @@
+@media (max-width: 550px) {
+
+  body {
+    justify-content: center;
+  }
+
+  div#mataMosquito,
+  div#gameOver,
+  div#vitoria {
+    text-align: center;
+  }
+  img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

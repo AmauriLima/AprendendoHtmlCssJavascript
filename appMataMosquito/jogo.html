@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mata mosquito - Game</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onload="spawningMoscas(), cronometro()" onresize="ajustaTamanhoPalcoJogo()">
+  <!-- onload="spawningMoscas()" -->
+  <!-- onload="spawningMoscas()" -->
+  <div id="panel">
+    
+    <div id="vidas">
+      <div id="vida1" class="coracao cheio"></div>
+      <div id="vida2" class="coracao cheio"></div>
+      <div id="vida3" class="coracao cheio"></div>
+    </div>
+
+    <div id="tempoRestante">
+      Tempo restante <span id="tempo"></span>
+    </div>
+ 
+  </div>
+  <script src="jogo.js"></script>
+</body>
+</html>

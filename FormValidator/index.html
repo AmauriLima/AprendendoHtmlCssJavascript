@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <main>
+  
+    <form action="POST" class="validator">
+
+      <h1>Crie uma conta</h1>
+      
+      <fieldset>
+        <label class="sr-only" for="name">Nome:</label>
+        <input
+          data-rules="required|min=2" type="text" name="name" id="name" placeholder="Nome">
+      </fieldset>
+    
+      <fieldset>
+        <label class="sr-only" for="surname">Sobrenome:</label>
+        <input 
+        data-rules="required|min=2" type="text" name="surname" id="surname" placeholder="Sobrenome">
+      </fieldset>
+    
+      <fieldset id="email-fieldset">
+        <label class="sr-only" for="email">Seu e-mail:</label>
+        <input 
+        data-rules="required|email" type="email" name="email" id="email" placeholder="E-mail">
+      </fieldset>
+    
+      <fieldset>
+        <label class="sr-only" for="pass">Sua senha:</label>
+        <input 
+        data-rules="required|min=4" type="password" name="pass" id="pass" placeholder="Senha">
+      </fieldset>
+
+
+      <fieldset>
+        <label class="sr-only" for="confirm-pass">Confirmar senha:</label>
+        <input 
+        data-rules="required|equal" type="password" name="confirm-pass" id="confirm-pass" placeholder="Confirmar Senha">
+      </fieldset>
+  
+      <button type="submit">Cadastrar</button>
+      
+      <div id="login">
+        Já tem uma conta? <a href="">login</a>
+      </div>
+
+    </form>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mata mosquitos</title>
+  <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="assets/css/resposive.css">
+
+
+  <script>
+    function startGame() {
+
+      const nivel = document.querySelector('#niveis').value;
+      const tempo = document.querySelector('#tempo').value;
+      if (nivel === '') {
+        alert('Selecione um nível para continuar');
+        return false;
+      }
+
+      if (tempo === '') {
+        alert('Selecione o tempo para continuar');
+        return false;
+      }
+      window.location.href = 'jogo.html?' + nivel + ',' + tempo;
+    }
+  </script>
+</head>
+<body>
+  
+
+  <div id="mataMosquito">
+    <img src="assets/images/game.png">
+  </div>
+
+  <div id="menu">
+    <select id="niveis">
+      <option value="">-- Selecione um nível --</option>
+
+      <option value="normal">Normal</option>
+      <option value="dificil">Difícil</option>
+      <option value="mwzera">Mwzera</option>
+    </select>
+
+    <select id="tempo">
+      <option value="">-- Selecione o tempo --</option>
+
+      <option value="dez">10 segundos</option>
+      <option value="vinte">20 segundos</option>
+      <option value="trinta">30 segundos</option>
+      <option value="sessenta">60 segundos</option>
+    </select>
+
+    <button onclick="startGame()">Iniciar Jogo</button>
+  </div>
+</body>
+</html>

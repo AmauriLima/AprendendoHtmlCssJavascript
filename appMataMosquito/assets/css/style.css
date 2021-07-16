@@ -1,0 +1,76 @@
+html {
+  cursor: url(../images/mata_mosca.png) 25 25, auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: url(../images/mata_mosca.png) 30 30 auto;
+}
+
+#panel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffffa1;
+  padding: 10px 30px;
+}
+
+#vidas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 5px;
+}
+
+#tempoRestante {
+  font-size: 16px;
+  font-weight: bold;
+}
+.coracao {
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+
+.cheio {
+  background-image: url(../images/coracao_cheio.png);
+}
+
+.vazio {
+  background-image: url(../images/coracao_vazio.png);
+}
+
+
+.mosca1 {
+  width: 50px;
+  height: 50px;
+}
+
+.mosca2 {
+  width: 70px;
+  height: 70px;
+}
+
+.mosca3 {
+  width: 90px;
+  height: 90px;
+}
+
+.lado1 {
+  transform: scaleX(1);
+}
+
+.lado2 {
+    transform: scaleX(-1);
+}

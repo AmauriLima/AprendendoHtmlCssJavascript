@@ -1,0 +1,29 @@
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+select {
+  display: inline-block;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  outline: none;
+  margin: 5px 0px;
+}
+
+#mataMosquito img {
+  max-height: 400px;
+}
+button {
+  margin-top: 5px;
+  padding: 12px;
+  max-width: 150px;
+  background-color: #DD4D45;
+}
+
+button:hover {
+  background-color: #ce4942;
+}
